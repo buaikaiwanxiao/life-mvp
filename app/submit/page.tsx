@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
-import { supabase } from '@/lib/supabase';
 
 export default function SubmitPage() {
   const router = useRouter();
@@ -57,6 +56,8 @@ export default function SubmitPage() {
         .map(l => l.trim())
         .filter(l => l.length > 0);
 
+      const { getSupabase } = await import('@/lib/supabase');
+      const supabase = getSupabase();
       const { data: submission, error: submissionError } = await supabase
         .from('submissions')
         .insert({

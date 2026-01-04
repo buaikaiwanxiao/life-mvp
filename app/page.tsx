@@ -24,7 +24,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="/submit">
                   <Button size="lg" className="w-full sm:w-auto min-w-[240px]">
-                    Start the 7-Day Challenge
+                    Get your 7 days FREE TRIAL
                   </Button>
                 </Link>
                 <Link href="#how-it-works">
