@@ -8,6 +8,18 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = [...(config.externals || []), 'firebase-functions', 'firebase-admin'];
+    }
+    return config;
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    dirs: ['app', 'components', 'lib'],
+  },
 };
 
 module.exports = nextConfig;

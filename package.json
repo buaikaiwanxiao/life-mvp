@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "functions:build": "cd functions && npm run build",
+    "functions:deploy": "cd functions && npm run deploy",
+    "functions:serve": "cd functions && npm run serve"
   },
   "dependencies": {
     "next": "^15.1.5",
